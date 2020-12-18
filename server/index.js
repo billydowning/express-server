@@ -5,6 +5,10 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const app = express();
 const router = require("./router");
+const keys = require("./keys/keys");
+const mongoose = require("mongoose");
+
+mongoose.connect(keys.mongoURI);
 
 //App setup
 app.use(morgan("combined"));

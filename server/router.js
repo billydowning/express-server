@@ -1,5 +1,5 @@
+const auth = require("./controllers/auth");
+
 module.exports = function (app) {
-  app.get("/", (req, res, next) => {
-    res.send("SUP NOW?!?!");
-  });
+  app.post("/signup", auth.signup);
 };

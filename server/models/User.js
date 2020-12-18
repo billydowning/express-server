@@ -10,6 +10,7 @@ const userSchema = new Schema({
 
 //Create the model class
 
-const model = mongoose.model("User", userSchema);
+const ModelClass = mongoose.model("User", userSchema);
 
 //Export the model
+module.exports = ModelClass;
